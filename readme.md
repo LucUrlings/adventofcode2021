@@ -1,3 +1,5 @@
+## Progress
+
 <pre class="calendar"><a aria-label="Day 1, two stars" href="/2021/day/1" class="calendar-day1 calendar-verycomplete">                   ~  <span class="calendar-color-w1">~</span> ~ <span class="calendar-color-w1">~</span>~ <span class="calendar-color-w1">~</span>~<span class="calendar-color-w1">~~</span>~<span class="calendar-color-w1">~~~~~~~~~~~~~~~</span>  <span class="calendar-day"> 1</span> <span class="calendar-mark-complete">*</span><span class="calendar-mark-verycomplete">*</span></a>
 <a aria-label="Day 2, two stars" href="/2021/day/2" class="calendar-day2 calendar-verycomplete">                                   '.<span class="calendar-color-w2">    '</span> <span class="calendar-color-g">..''''</span>  <span class="calendar-day"> 2</span> <span class="calendar-mark-complete">*</span><span class="calendar-mark-verycomplete">*</span></a>
 <span aria-hidden="true" class="calendar-day3">                                    .  '  :        <span class="calendar-day"> 3</span><span id="calendar-countdown"> 06:28:58</span></span>
