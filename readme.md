@@ -1,56 +1,6 @@
 <pre class="calendar"><a aria-label="Day 1, two stars" href="/2021/day/1" class="calendar-day1 calendar-verycomplete">                   ~  <span class="calendar-color-w1">~</span> ~ <span class="calendar-color-w1">~</span>~ <span class="calendar-color-w1">~</span>~<span class="calendar-color-w1">~~</span>~<span class="calendar-color-w1">~~~~~~~~~~~~~~~</span>  <span class="calendar-day"> 1</span> <span class="calendar-mark-complete">*</span><span class="calendar-mark-verycomplete">*</span></a>
 <a aria-label="Day 2, two stars" href="/2021/day/2" class="calendar-day2 calendar-verycomplete">                                   '.<span class="calendar-color-w2">    '</span> <span class="calendar-color-g">..''''</span>  <span class="calendar-day"> 2</span> <span class="calendar-mark-complete">*</span><span class="calendar-mark-verycomplete">*</span></a>
-<span aria-hidden="true" class="calendar-day3">                                    .  '  :        <span class="calendar-day"> 3</span><span id="calendar-countdown">06:28:58</span><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
-(function(){
-var countdown = document.getElementById("calendar-countdown");
-if (!countdown) return;
-var server_eta = 26518;
-var key = "2021-3-"+server_eta;
-var now = Math.floor(new Date().getTime()/1000);
-var target = server_eta + now;
-if (sessionStorage) {
-  // if you navigate away and hit the back button, this makes sure the countdown doesn't start from the wrong time
-  var prev_target = sessionStorage.getItem("calendar-target");
-  try { prev_target = JSON.parse(prev_target); } catch(e){}
-  if (prev_target && typeof prev_target === 'object' && prev_target.key === key) {
-    target = prev_target.target;
-  } else {
-    sessionStorage.setItem("calendar-target", JSON.stringify({key:key, target:target+1}));
-  }
-}
-
-var interval = null;
-function update_countdown() {
-  var remaining = Math.ceil(target - new Date().getTime()/1000);
-  if (remaining <= 0) {
-    clearInterval(interval);
-    interval = null;
-    countdown.textContent = "";
-
-    var a = document.createElement("a");
-    a[String.fromCharCode(104,114,101,102)] = "/2021" + String.fromCharCode(47,100,97,121,47) + "3";
-    a.className = "calendar-day3 calendar-day-new";
-    var span = countdown.parentNode;
-    while (span.firstChild) {
-      a.appendChild(span.firstChild);
-    }
-    a.appendChild(document.createTextNode("   "));
-    span.parentNode.insertBefore(a, span);
-    span.parentNode.removeChild(span);
-    countdown.parentNode.removeChild(countdown);
-  } else {
-    var hours = Math.floor(remaining/60/60);
-    remaining -= hours * 60 * 60;
-    var minutes = Math.floor(remaining/60);
-    remaining -= minutes * 60;
-    var seconds = remaining;
-    countdown.textContent = (hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
-  }
-}
-interval = setInterval(update_countdown,1000);
-update_countdown();
-})();
-</script></span>
+<span aria-hidden="true" class="calendar-day3">                                    .  '  :        <span class="calendar-day"> 3</span><span id="calendar-countdown">06:28:58</span><script async="" src="//www.google-analytics.com/analytics.js"></script><script></script></span>
 <span aria-hidden="true" class="calendar-day4">                                                   <span class="calendar-day"> 4</span></span>
 <span aria-hidden="true" class="calendar-day5">                                                   <span class="calendar-day"> 5</span></span>
 <span aria-hidden="true" class="calendar-day6">                                                   <span class="calendar-day"> 6</span></span>
