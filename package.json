@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "runDayOnePartOne": "node src/days/one/partOne/main.mjs",
-    "runDayOnePartTwo": "node src/days/one/partTwo/main.mjs",
-    "runDayTwoPartOne": "node src/days/two/partOne/main.mjs",
-    "runDayTwoPartTwo": "node src/days/two/partTwo/main.mjs"
+    "runDay1PartOne": "node src/days/1/partOne/main.mjs",
+    "runDay1PartTwo": "node src/days/1/partTwo/main.mjs",
+    "runDay2PartOne": "node src/days/2/partOne/main.mjs",
+    "runDay2PartTwo": "node src/days/2/partTwo/main.mjs",
+    "runDay3PartOne": "node src/days/3/partOne/main.mjs",
+    "runDay3PartTwo": "node src/days/3/partTwo/main.mjs"
   },
   "keywords": [],
   "author": "",
