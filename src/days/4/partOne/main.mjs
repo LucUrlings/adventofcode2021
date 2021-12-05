@@ -1,63 +1,8 @@
 import { input } from "../input.mjs";
-// const importBingoCards = () => {
-//   let reader = new FileReader();
-//   const lines =
-// }
-// import * as readline from "readline";
-// import * as fs from "fs";
 
 const drawnNumbers = [23, 91, 18, 32, 73, 14, 20, 4, 10, 55, 40, 29, 13, 25, 48, 65, 2, 80, 22, 16, 93, 85, 66, 21, 9, 36, 47, 72, 88, 58, 5, 42, 53, 69, 52, 8, 54, 63, 76, 12, 6, 99, 35, 95, 82, 49, 41, 17, 62, 34, 51, 77, 94, 7, 28, 71, 92, 74, 46, 79, 26, 19, 97, 86, 87, 37, 57, 64, 1, 30, 11, 96, 70, 44, 83, 0, 56, 90, 59, 78, 61, 98, 89, 43, 3, 84, 67, 38, 68, 27, 81, 39, 15, 50, 60, 24, 45, 75, 33, 31];
 
 const bingoCards = [...input];
-
-// const readInterface = readline.createInterface({
-//   input: fs.createReadStream("src/days/4/input.txt"),
-//   output: process.stdout,
-//   console: false
-// });
-//
-// let lineCount = 1;
-// const bingoCards = [];
-// let dataCard = [];
-// let numbers;
-// readInterface.on("line", (line) => {
-//   if (lineCount === 1) {
-//     numbers = line.split(" ")[0].split(',')
-//   } else if (lineCount === 2) {
-//   } else {
-//     const l = line.split(/[\n\r\s]+/).filter(e => e);
-//     if (l[1]) {
-//       dataCard.push(l);
-//       if (dataCard.length === 5) {
-//         bingoCards.push(dataCard);
-//         dataCard = [];
-//       }
-//     }
-//   }
-//
-//   lineCount++;
-// }).on("close", () => {
-//   // console.log("bingoCards", bingoCards.length);
-//   // bingoCards = [...bingoCards];
-//   main(numbers, bingoCards);
-//
-//   console.log(winningSUM);
-//   console.log(winningDrawnNumber);
-//   console.log(winningSUM * winningDrawnNumber);
-// });
-
-
-//
-// var lineReader = require('readline').createInterface({
-//   input: require('fs').createReadStream('file.in')
-// });
-//
-// lineReader.on('line', function (line) {
-//   console.log('Line from file:', line);
-// });
-
-
-
 
 const main = (drawnNumbers, bingoCards) => {
   let bCards = bingoCards;
