@@ -1,99 +1,104 @@
-import { input } from "../input.mjs";
+import {input} from "../input.mjs";
 
 const drawnNumbers = [23, 91, 18, 32, 73, 14, 20, 4, 10, 55, 40, 29, 13, 25, 48, 65, 2, 80, 22, 16, 93, 85, 66, 21, 9, 36, 47, 72, 88, 58, 5, 42, 53, 69, 52, 8, 54, 63, 76, 12, 6, 99, 35, 95, 82, 49, 41, 17, 62, 34, 51, 77, 94, 7, 28, 71, 92, 74, 46, 79, 26, 19, 97, 86, 87, 37, 57, 64, 1, 30, 11, 96, 70, 44, 83, 0, 56, 90, 59, 78, 61, 98, 89, 43, 3, 84, 67, 38, 68, 27, 81, 39, 15, 50, 60, 24, 45, 75, 33, 31];
 
-const bingoCards = [...input];
+const main = (drawnNumbers, inputBingoCards) => {
+    let bCards = [...inputBingoCards];
 
-const main = (drawnNumbers, bingoCards) => {
-  let bCards = bingoCards;
+    let winningCard = null
+    let lastNumber = null
 
-  let winningCard = null
+    for (let i = 0; i < drawnNumbers.length; i++) {
+        if (bCards.length === 1) {
+            bCards = markNumber(bCards, drawnNumbers[i]);
+            if (checkRowsColumns(bCards).length === 1) {
+                winningCard = bCards[0]
+                lastNumber = drawnNumbers[i];
+                break;
+            }
 
-  for (let i = 0; i < drawnNumbers.length; i++) {
-    bCards = markNumber(bCards, drawnNumbers[i]);
-    const idToRemove = checkRowsColumns(bCards);
-    bCards = bCards.filter((item, index) => idToRemove !== index);
-
-    if (bCards.length === 1) {
-      winningCard = bCards[0]
-      break;
+        } else {
+            bCards = markNumber(bCards, drawnNumbers[i]);
+            const idToRemove = checkRowsColumns(bCards);
+            bCards = bCards.filter((item, cardIndex) => !idToRemove.includes(cardIndex));
+        }
     }
-  }
 
-  return `Winning card: ${winningCard}`;
+    const winningCardScore = calculateScore(winningCard)
+
+    return `Winning card: ${winningCard}, Calculate score: ${winningCardScore}, Last Drawn number: ${lastNumber}, answer: ${winningCardScore * lastNumber}`;
 };
 
 const checkRowsColumns = (bCards) => {
-  let idToRemove = null;
+    const bingoCardIndexToRemove = [];
 
-  bCards.some((bingoCard, bIndex) => {
-    // Rows
-    if (checkRows(bingoCard)) {
-      idToRemove = bIndex;
-      return true;
-    }
+    bCards.forEach((bingoCard, bIndex) => {
+        if (checkRows(bingoCard)) {
+            if(!bingoCardIndexToRemove.includes(bIndex))
+                bingoCardIndexToRemove.push(bIndex);
+        }
 
-    // Columns
-    if (checkColumns(bingoCard)) {
-      idToRemove = bIndex;
-      return true;
-    }
-  });
+        if (checkColumns(bingoCard)) {
+            if(!bingoCardIndexToRemove.includes(bIndex))
+                bingoCardIndexToRemove.push(bIndex);
+        }
+    });
 
-  return idToRemove;
+    return bingoCardIndexToRemove;
 };
 
 const checkRows = (bingoCard) => {
-  return bingoCard.some((row, rIndex) => {
-    const first = row[0];
-    const second = row[1];
-    const third = row[2];
-    const fourth = row[3];
-    const fifth = row[4];
-    if (first.includes("*") && second.includes("*") && third.includes("*") && fourth.includes("*") && fifth.includes("*")) {
-      return true
+    for (let i = 0; i < 5; i++) {
+        const first = bingoCard[i][0];
+        const second = bingoCard[i][1];
+        const third = bingoCard[i][2];
+        const fourth = bingoCard[i][3];
+        const fifth = bingoCard[i][4];
+        if (first.includes("*") && second.includes("*") && third.includes("*") && fourth.includes("*") && fifth.includes("*")) {
+            return true
+        }
     }
-    return false;
-  });
+    return false
 };
 
 const checkColumns = (bingoCard) => {
-  for (let iIndex = 0; iIndex < 5; iIndex++) {
-    const first = bingoCard[0][iIndex];
-    const second = bingoCard[1][iIndex];
-    const third = bingoCard[2][iIndex];
-    const fourth = bingoCard[3][iIndex];
-    const fifth = bingoCard[4][iIndex];
-    if (first.includes("*") && second.includes("*") && third.includes("*") && fourth.includes("*") && fifth.includes("*")) {
-      return true
+    for (let i = 0; i < 5; i++) {
+        const first = bingoCard[0][i];
+        const second = bingoCard[1][i];
+        const third = bingoCard[2][i];
+        const fourth = bingoCard[3][i];
+        const fifth = bingoCard[4][i];
+        if (first.includes("*") && second.includes("*") && third.includes("*") && fourth.includes("*") && fifth.includes("*")) {
+            return true
+        }
     }
-  }
-  return false
+    return false
 };
 
 const calculateScore = (bingoCard) => {
-  let score = 0;
+    let score = 0;
 
-  bingoCard.forEach(row => {
-    row.forEach(number => {
-      if (!number.includes("*"))
-        score = score + Number(number);
+    bingoCard.forEach(row => {
+        row.forEach(number => {
+            if (!number.includes("*"))
+                score = score + Number(number);
+        });
     });
-  });
-  return score;
+    return score;
 };
 
-const markNumber = (cards, number) => {
-  cards.forEach((bingoCard, bIndex) => {
-    bingoCard.forEach((row, rIndex) => {
-      row.forEach((item, iIndex) => {
-        if (item === number.toString()) {
-          cards[bIndex][rIndex][iIndex] = item.concat("*");
-        }
-      });
+const markNumber = (bCards, number) => {
+    let bingoCards = [...bCards]
+    bingoCards.forEach((bingoCard, bIndex) => {
+        bingoCard.forEach((row, rIndex) => {
+            row.forEach((item, iIndex) => {
+                if (item === number.toString()) {
+                    bingoCards[bIndex][rIndex][iIndex] = bingoCards[bIndex][rIndex][iIndex].concat("*");
+                }
+            });
+        });
     });
-  });
-  return cards;
+    return bingoCards;
 };
 
-console.log(main(drawnNumbers, bingoCards));
+console.log(main(drawnNumbers, input));
