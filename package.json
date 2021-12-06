@@ -12,7 +12,9 @@
     "runDay3PartOne": "node src/days/3/partOne/main.mjs",
     "runDay3PartTwo": "node src/days/3/partTwo/main.mjs",
     "runDay4PartOne": "node src/days/4/partOne/main.mjs",
-    "runDay4PartTwo": "node src/days/4/partTwo/main.mjs"
+    "runDay4PartTwo": "node src/days/4/partTwo/main.mjs",
+    "runDay5PartOne": "node src/days/5/partOne/main.mjs",
+    "runDay5PartTwo": "node src/days/5/partTwo/main.mjs"
   },
   "keywords": [],
   "author": "",
