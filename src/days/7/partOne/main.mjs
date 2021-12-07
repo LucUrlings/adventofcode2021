@@ -8,11 +8,9 @@ const rangeArray = (start, end) => {
   return foo;
 };
 
-const main = (inputArray) => {
-  const min = Math.min(...inputArray);
-  const max = Math.max(...inputArray);
-
-  const startingPositions = [...inputArray];
+const main = (startingPositions) => {
+  const min = Math.min(...startingPositions);
+  const max = Math.max(...startingPositions);
 
   const destinationArray = rangeArray(min, max);
   const result = [];
