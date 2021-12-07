@@ -14,7 +14,9 @@
     "runDay4PartOne": "node src/days/4/partOne/main.mjs",
     "runDay4PartTwo": "node src/days/4/partTwo/main.mjs",
     "runDay5PartOne": "node src/days/5/partOne/main.mjs",
-    "runDay5PartTwo": "node src/days/5/partTwo/main.mjs"
+    "runDay5PartTwo": "node src/days/5/partTwo/main.mjs",
+    "runDay6PartOne": "node src/days/6/partOne/main.mjs",
+    "runDay6PartTwo": "node src/days/6/partTwo/main.mjs"
   },
   "keywords": [],
   "author": "",
