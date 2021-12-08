@@ -1,4 +1,4 @@
-import { input } from '../input.mjs'
+import { input } from '../input.js'
 
 const days = 256
 
@@ -16,7 +16,9 @@ const main = (input) => {
   } = init(input)
 
   for (let i = 0; i < days; i++) {
-    console.log(`Zero: ${zeroCount}, One: ${oneCount}, Two: ${twoCount}, Three: ${threeCount}, Four: ${fourCount}, Five: ${fiveCount}, Six: ${sixCount}, Seven: ${sevenCount}, Eight: ${eightCount}`)
+    console.log(
+      `Zero: ${zeroCount}, One: ${oneCount}, Two: ${twoCount}, Three: ${threeCount}, Four: ${fourCount}, Five: ${fiveCount}, Six: ${sixCount}, Seven: ${sevenCount}, Eight: ${eightCount}`
+    )
 
     const tempZeroCount = zeroCount
 
@@ -30,7 +32,17 @@ const main = (input) => {
     sevenCount = eightCount
     eightCount = tempZeroCount
   }
-  return zeroCount + oneCount + twoCount + threeCount + fourCount + fiveCount + sixCount + sevenCount + eightCount
+  return (
+    zeroCount +
+    oneCount +
+    twoCount +
+    threeCount +
+    fourCount +
+    fiveCount +
+    sixCount +
+    sevenCount +
+    eightCount
+  )
 }
 
 const init = (startingArray) => {
@@ -43,7 +55,7 @@ const init = (startingArray) => {
   let sixCount = 0
   let sevenCount = 0
   let eightCount = 0
-  startingArray.forEach(number => {
+  startingArray.forEach((number) => {
     switch (number) {
       case 1:
         oneCount++
@@ -62,6 +74,16 @@ const init = (startingArray) => {
         break
     }
   })
-  return { zeroCount, oneCount, twoCount, threeCount, fourCount, fiveCount, sixCount, sevenCount, eightCount }
+  return {
+    zeroCount,
+    oneCount,
+    twoCount,
+    threeCount,
+    fourCount,
+    fiveCount,
+    sixCount,
+    sevenCount,
+    eightCount,
+  }
 }
 console.log(main(input))

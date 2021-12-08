@@ -1,4 +1,4 @@
-import { input } from '../input.mjs'
+import { input } from '../input.js'
 
 const rangeArray = (start, end) => {
   let foo = []
@@ -14,9 +14,9 @@ const main = (startingPositions) => {
   const destinationArray = rangeArray(min, max)
   const result = []
 
-  destinationArray.forEach(destinationNumber => {
+  destinationArray.forEach((destinationNumber) => {
     let fuelUsed = 0
-    startingPositions.forEach(startingNumber => {
+    startingPositions.forEach((startingNumber) => {
       if (destinationNumber < startingNumber) {
         fuelUsed += startingNumber - destinationNumber
       } else if (destinationNumber > startingNumber) {
