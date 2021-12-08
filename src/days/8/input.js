@@ -1,1 +1,802 @@
-export const input = [1101, 1, 29, 67, 1102, 0, 1, 65, 1008, 65, 35, 66, 1005, 66, 28, 1, 67, 65, 20, 4, 0, 1001, 65, 1, 65, 1106, 0, 8, 99, 35, 67, 101, 99, 105, 32, 110, 39, 101, 115, 116, 32, 112, 97, 115, 32, 117, 110, 101, 32, 105, 110, 116, 99, 111, 100, 101, 32, 112, 114, 111, 103, 114, 97, 109, 10, 160, 1267, 277, 1068, 422, 1235, 790, 1391, 45, 252, 513, 1029, 414, 216, 409, 1373, 1419, 1176, 757, 64, 748, 835, 20, 436, 147, 347, 1264, 1532, 240, 272, 430, 7, 85, 51, 12, 107, 1277, 779, 867, 260, 802, 361, 89, 754, 206, 80, 25, 559, 220, 657, 178, 186, 2, 31, 825, 290, 144, 379, 0, 1682, 1166, 1241, 180, 102, 464, 444, 122, 718, 25, 100, 1050, 1358, 604, 546, 1157, 130, 59, 127, 1351, 238, 97, 75, 821, 265, 23, 786, 116, 115, 93, 730, 1340, 777, 1114, 263, 352, 115, 5, 69, 1041, 101, 1222, 203, 1273, 217, 28, 976, 425, 480, 7, 124, 45, 192, 860, 312, 1107, 1040, 137, 306, 523, 692, 590, 562, 789, 383, 145, 86, 297, 791, 240, 697, 22, 230, 834, 963, 837, 1164, 1758, 487, 414, 86, 1026, 1034, 478, 613, 1, 769, 85, 980, 935, 1455, 16, 204, 170, 380, 324, 14, 699, 220, 50, 451, 738, 52, 437, 963, 718, 178, 508, 711, 1739, 936, 1515, 246, 908, 126, 602, 295, 591, 22, 484, 752, 1, 1442, 167, 132, 52, 613, 1172, 353, 36, 56, 468, 123, 393, 765, 1456, 218, 269, 6, 20, 649, 727, 454, 86, 640, 1113, 836, 124, 405, 571, 882, 107, 75, 730, 346, 94, 35, 626, 1174, 299, 392, 1449, 502, 854, 500, 128, 852, 248, 645, 159, 774, 155, 884, 1336, 285, 426, 0, 269, 466, 1483, 93, 13, 17, 255, 295, 530, 694, 1178, 968, 612, 224, 160, 32, 1154, 194, 494, 24, 845, 43, 274, 344, 301, 486, 43, 351, 581, 929, 168, 1629, 163, 206, 98, 1242, 1242, 1706, 1777, 721, 293, 1621, 132, 199, 12, 66, 247, 1244, 333, 445, 154, 795, 70, 424, 11, 826, 835, 250, 288, 408, 516, 822, 411, 69, 636, 521, 152, 67, 401, 531, 186, 933, 515, 780, 490, 201, 369, 111, 266, 952, 400, 677, 372, 548, 1325, 1111, 17, 543, 1293, 20, 507, 74, 116, 656, 644, 872, 35, 80, 1273, 279, 475, 1585, 1446, 651, 1338, 285, 284, 23, 1130, 237, 843, 121, 53, 81, 573, 5, 956, 276, 553, 1084, 544, 731, 35, 16, 53, 34, 405, 1337, 665, 303, 10, 108, 1132, 233, 3, 834, 415, 161, 409, 1055, 202, 707, 296, 341, 57, 521, 548, 15, 137, 359, 57, 388, 282, 267, 293, 1450, 28, 424, 819, 941, 1388, 474, 687, 87, 271, 1462, 522, 33, 26, 841, 345, 104, 150, 573, 481, 297, 1075, 489, 420, 424, 340, 504, 685, 105, 898, 870, 206, 129, 516, 492, 42, 216, 1829, 1317, 10, 60, 54, 255, 103, 457, 257, 101, 93, 981, 412, 67, 519, 574, 169, 799, 381, 1509, 60, 409, 51, 151, 464, 1676, 916, 18, 30, 772, 1566, 1283, 359, 1260, 10, 405, 750, 160, 181, 541, 358, 213, 300, 1073, 328, 399, 214, 119, 478, 889, 65, 56, 1077, 1427, 52, 359, 90, 42, 1248, 336, 51, 1396, 509, 237, 785, 440, 806, 339, 99, 354, 640, 272, 665, 772, 135, 91, 11, 175, 128, 482, 1244, 1243, 629, 137, 140, 1003, 626, 433, 391, 731, 1180, 671, 169, 710, 1561, 385, 1281, 272, 236, 318, 207, 1323, 16, 233, 9, 720, 295, 34, 183, 362, 987, 1016, 366, 760, 1244, 878, 600, 275, 1209, 41, 792, 951, 85, 636, 125, 217, 342, 184, 581, 1300, 66, 165, 804, 285, 756, 96, 278, 598, 163, 655, 138, 869, 537, 141, 1364, 897, 406, 617, 65, 444, 244, 494, 172, 119, 358, 1183, 310, 226, 98, 550, 634, 948, 985, 247, 1499, 729, 165, 371, 939, 299, 761, 477, 1480, 840, 3, 319, 675, 492, 564, 3, 3, 80, 182, 69, 460, 341, 789, 742, 46, 1309, 360, 48, 296, 363, 946, 214, 252, 54, 147, 435, 85, 276, 1072, 23, 71, 755, 572, 268, 1362, 619, 639, 365, 623, 1560, 322, 535, 997, 1021, 317, 663, 82, 314, 857, 16, 194, 363, 24, 240, 1596, 1123, 242, 816, 116, 645, 64, 38, 589, 428, 147, 632, 457, 555, 908, 921, 202, 182, 403, 551, 358, 483, 1195, 1213, 28, 1156, 725, 320, 16, 74, 931, 103, 145, 146, 1206, 433, 1052, 158, 531, 699, 675, 379, 393, 475, 384, 1041, 141, 1248, 521, 136, 326, 199, 725, 200, 465, 796, 724, 672, 569, 70, 663, 15, 150, 131, 1261, 17, 1211, 66, 175, 608, 17, 81, 551, 627, 1469, 1032, 342, 2, 972, 184, 798, 960, 22, 55, 462, 1, 151, 91, 119, 76, 1062, 96, 1424, 567, 366, 831, 633, 205, 691, 50, 1314, 732, 558, 167, 1624, 5, 147, 47, 110, 250, 935, 177, 445, 79, 306, 653, 47, 75, 626, 173, 104, 354, 573, 523, 46, 46, 757, 541, 431, 1129, 787, 502, 1328, 1093, 82, 872, 1876, 1386, 136, 504, 273, 194, 297, 0, 163, 1025, 996, 354, 1457, 1127, 52, 45, 1364, 1128, 457, 1576, 282, 573, 1648, 16, 28, 582, 768, 92, 92, 817, 1515, 297, 349, 97, 1523, 634, 923, 76, 1174, 552, 347, 750, 326, 221, 149, 0, 188, 791, 251, 113, 1, 71, 92, 393, 103, 618, 335, 97, 236, 418, 256, 764, 435, 411, 941, 74, 423, 443, 27, 427, 178, 262, 181, 362, 156, 572, 324, 684, 796, 249, 288, 413, 132, 29, 444, 766, 1135, 1235, 208, 231, 620, 1481, 228, 174, 133, 918, 1825, 618, 663, 22, 124, 119, 52, 159, 1318, 1724, 338, 243, 206, 127, 436, 163, 297, 617, 141, 59, 65, 20, 164, 11, 126, 363, 150, 726, 217, 1282, 1708, 118, 1055, 60, 603, 852, 170, 1097, 58, 213, 495, 566, 673, 1607, 994, 539, 1655]
+export const input = [
+  {
+    'cefbd dcg dcfgbae bdeafg gfcaed ecbgd bcag bdacge cg bedag':
+      'cebdg egcfda gdacbe badefg',
+  },
+  {
+    'aefgc bcdgef bef bdegca bdeca fdab afcbe fcebgda bf bfaecd':
+      'fgdecab gefac fgaec bdaf',
+  },
+  {
+    'cbgedf beda cfgbea cafbed cdb afcbe bd gbaedcf bfacd gfacd':
+      'acdefb cdfeab dfcaeb abde',
+  },
+  {
+    'efbag de adcgf fgcdea gfdabc daec fdcgbe edg fgead acbgdfe':
+      'de bgfae decafbg gefabcd',
+  },
+  {
+    'bfg gabecd gf facgb cafgbd acebf degcfb bagedfc gdabc gfad':
+      'daecbg gabcde cfgdbe bgcfa',
+  },
+  {
+    'gbaf dbfgac dfeacbg fg gcf cdfab cbefad dbcfg faegdc gbdce':
+      'aecgfd efadcb bcdeaf cdbaf',
+  },
+  {
+    'dgc gbfde aebdgf gecfd cd gecdbaf cfgedb dbgafc efagc decb':
+      'gebdf cd fcage dabcfeg',
+  },
+  {
+    'dbfeg debfcga ecg gfbaec eadfgc ebac gbadfc ce ecfgb acgbf':
+      'dabfecg abegfc dcbgaf cfgab',
+  },
+  {
+    'gbadefc dbegac bcadef gabcf gd gfbdc gefd fedbc dgb bedgfc':
+      'cbdgf bfacde cdgbafe edfg',
+  },
+  {
+    'edbac fbaedg aedcg acg gdcf fbcedag afedgc acbfeg gc fdaeg':
+      'dafge adceg cbeda dcbae',
+  },
+  {
+    'gbcfe fgebdac cefab gdfcb efg aegdfb bgadcf gdec ge gecdfb':
+      'aecfb egcd fecab bcfdga',
+  },
+  {
+    'gbd ecbfga gbedcaf bgedca bdgac baegc dg cedbfg dfbca geda':
+      'cdbaeg dgaceb gade bfcad',
+  },
+  {
+    'cefab agf faceg agced gf fgabedc gacdbe dabfgc ecgfda edfg':
+      'gdeac fgadcb afg agcfdb',
+  },
+  {
+    'bagd ecfagb ag gaebdf acdfeb abefd edfgacb fcegd dgefa eag':
+      'afdge egfdc abefd dfaeb',
+  },
+  {
+    'gdcaf ebafdg fdcbeg dbgce aecb adcge adcgbe gea ea afgbdec':
+      'efdgbc egacdbf egcbd bedacg',
+  },
+  {
+    'gafcd bedcf ab cfdbeag eafb dfbac decfgb dgbeac cedfab acb':
+      'abc cba ebgcad fcdageb',
+  },
+  {
+    'dceagb edfa af bfa acfdbg faegb gbade ecfbg eafdgb cebadgf':
+      'degcbfa af bgdecfa aegbf',
+  },
+  {
+    'efcabgd gfbead gbcefa egabf bcgea gc badce fagcbd acg fgce':
+      'bfgeca gca bgcae bafcgd',
+  },
+  {
+    'afcgd gafecdb ea befcg egda gbfdac eaf caefbd cadegf faceg':
+      'aegd fecbg gdea fcgdab',
+  },
+  {
+    'gcbd cag gbcfae bfdcea cg acgfd bgadcfe aefdg fabcd bdcgfa':
+      'dabcf dbgc bcdg gc',
+  },
+  {
+    'cedgbaf ae afe gdfec cdbfa dfaec faebgc bdea bgfdac cfdeab':
+      'begcdaf ecfgba ae ae',
+  },
+  {
+    'bfea adcbge feacd bcfeagd af gcfde caebd acbedf afd dfgcab':
+      'aebf becad dfa fcegd',
+  },
+  {
+    'dagef acdgf ecad ea gfedb gea cdgafe acegbf dgfacb aecgdbf':
+      'cagfd dfabgc gfbed ae',
+  },
+  {
+    'fced bgfcad ecb cafbde afbcegd abdce dcafb ec gadbe cfegab':
+      'afgcbe ec cfegab bcdfa',
+  },
+  {
+    'afedbg bda gfbcade ebfdg dbacef badeg fecgdb agfb agecd ba':
+      'ecdag gcbedf fdgeb gfdeb',
+  },
+  {
+    'becdfg ac dcgef aegcfd gadc eabfg afegc dgefcba eac adbcef':
+      'bcfgde ca facge fbgea',
+  },
+  {
+    'dafg abegfd defgcab df abegcd eafcdb edf gedbf dageb egfbc':
+      'agfdbe df agefdcb dfebg',
+  },
+  {
+    'fcea cbe bdfeac edfgba deafb edfgabc adbec efdcgb bagcd ce':
+      'bfegda baedf dagbc cbeafd',
+  },
+  {
+    'bfdec abefgc gb gfbd gbced fbdecg gedfbac ecgad cbg bcfaed':
+      'fedcb bdecg efdcgb dceagbf',
+  },
+  {
+    'cgabe gafc bcegaf bfcaegd begfda agedcb gf gefbc bcdfe bfg':
+      'gcaf bedacg becdga bfg',
+  },
+  {
+    'gebdfac cbga fadebc fcgdab ag gbdfa dbafc agd bdefg egcdfa':
+      'abdfc bfadce abcfd abcgfed',
+  },
+  {
+    'caefd fgabed acefdg gbcfe gdac dcfge ecfabd cdebgfa gd gdf':
+      'cdga gedfca defagc ebfcg',
+  },
+  {
+    'efagc cdf df cfdae dgbfca egadfc gdfe dabce gacefb cfbdega':
+      'cbefag ceadb dabfegc cbdea',
+  },
+  {
+    'edfca eacdgf aefbc ced faedbg gfead dgac fgabdec dfgceb cd':
+      'edbafg dcag dec dagc',
+  },
+  {
+    'fgcbade ecfdg efcbad aefdc deabc bgaced gafecb fa bfda efa':
+      'eabcgdf af dceabf bdfcea',
+  },
+  {
+    'gfabd abg ab gefdb gfabdce cdebfg dabecg bagfed dacgf fbea':
+      'ba bga fdacg dgbeca',
+  },
+  {
+    'ec dcgfa gcdeba efgcd dce dcegbf gbefd bfce dbgafce bgdeaf':
+      'cefb agedcb cegdf ecd',
+  },
+  {
+    'cde daecbg dbeafc dacbgf fegcb dfecb ed gbcaefd dacfb dfea':
+      'edfbac ed ecd eagbdc',
+  },
+  {
+    'gcbfdae cbdg dbgfe febad befcg dbgfec fcbaeg deg fedcga gd':
+      'adfeb ebgcf cedfga gadbcef',
+  },
+  {
+    'fceba dgefac aedb befadc dafcbge fbced gfabec gbfdc ed dfe':
+      'gcefba bade bfgdc cebdfa',
+  },
+  {
+    'bef fabg fb feabd cgadbe cgdfbe ecdaf dbfgea adgbe ecbgfad':
+      'gcdbae ecadf adgbe eadgbc',
+  },
+  {
+    'fcagb cefbga aebgcd eadgcf bfge gcefa fadebgc gbc afcdb gb':
+      'agbedc febcag gfbecda fcabd',
+  },
+  {
+    'dfgeca gfceba gd gcaeb gdc bdga dgbaec ecdgb dgfcbae dbefc':
+      'bacgef gcefba afcged cdgefab',
+  },
+  {
+    'edafg feagdb dgacefb dae bfgedc abfedc ad fbedg cgeaf bgda':
+      'gfbeda fcaeg dgba abgd',
+  },
+  {
+    'ad cadf dcabe fegbac gfadbe bdecfa gbdaefc dgecb feabc abd':
+      'fegdba cadf gdbeaf fcgbea',
+  },
+  {
+    'badfg dfeacg dfeag dbf bfecgd bf dacgb agdbcef gfaebd ebfa':
+      'fb gdbca agdbc fdbgae',
+  },
+  {
+    'gcbfda fa faeb efdac bacefd dbcfeag gedfcb fedcb afd gecda':
+      'feab gcfdba gaecd abcdef',
+  },
+  {
+    'da acegfdb acfgb gade abgdf cedfba fgbdec gedafb bad bfedg':
+      'eabfcd bfcdeg deafcb cbfedg',
+  },
+  {
+    'gcfdb dcea gadef gfdace bdgfeca fcbaeg agbedf ca acf cdfag':
+      'cgfad feagbd badgfe egfadc',
+  },
+  {
+    'cdgfba bfeadg gbca fadbg fcaed gdbface dgacf cg cgd dbgefc':
+      'gdafb cfeda cgab gbdfa',
+  },
+  {
+    'cbdeg bcda cag ca fegba gfdecb agdcfe cebdgfa cebga gbcead':
+      'gecab cdfbage gfeba gcabde',
+  },
+  {
+    'agfbc dage edbcfg dg bgd acedbfg dcagb bcafed edabc degcba':
+      'bgd gacdb gabedcf agebdfc',
+  },
+  {
+    'gd gdeb cbafed dgecfab faged fcdgab fgebda cfgae gdf beafd':
+      'acefg bdfeag feadgb cgaef',
+  },
+  {
+    'cadbfe acgbd ecfa fagbdec dgfabe cbade eafbd fbedgc ec bec':
+      'dbfgcea fcebdg bacde dbeafc',
+  },
+  {
+    'eaf eafdg afgdc cgef abcgdef dfgcae dgabe fe fbcaed dgfcab':
+      'bfgcad egfda gcef eaf',
+  },
+  {
+    'cdbgafe efb eagfcd cfgbe cbdefa cfgba dgbe be gcfed befdgc':
+      'eb fgdec dcafeb adfebc',
+  },
+  {
+    'gafcd ceba abedg aegdbf cfgedb adcge edc fagdcbe bcegad ec':
+      'ceagd dagbfce ce cde',
+  },
+  {
+    'acegdb fe adgcfe efgc gbcedaf dafbc gacde fcdae dgabef aef':
+      'geabdc eagdc fdebag bgeafd',
+  },
+  {
+    'fgdba ebfdg gfe gfeacbd fe eafb degacf gecdb bfegad fbgadc':
+      'bfcdag cdgbaf afdgbe adfbge',
+  },
+  {
+    'bagdfe edcfgba gbcea ecdgbf ebcfg gef dbfcga fe fced cfgdb':
+      'ecfd bcfeg gdcbf cfabged',
+  },
+  {
+    'fgacde egdbf ecf fc dbgefa gdfcbe bgeac cbfd dagcebf cfgbe':
+      'degfb gdbef bafcged egdafc',
+  },
+  {
+    'ed eda cgdafe cgdbea efacgdb gdbe eacfb acebd gcabd fdgbca':
+      'adbgc bcgad gdabc gacdb',
+  },
+  {
+    'cgbdf bcd cd fcad bfcag cfbdega begdac dbagcf dbgfe aebgcf':
+      'cfgba dgcfb cbdgf gcbefa',
+  },
+  {
+    'bd gfbdeac cdegf bdc cgefda gbfd fecdab dgcbe cgeba dcbgef':
+      'cbd db db gdecf',
+  },
+  {
+    'dgfcaeb adebcg ecdag fadc afe eagfc bgfce af edgcaf afegbd':
+      'gdcaefb fa cdaf eacdg',
+  },
+  {
+    'ebdfa bae be dfecabg fagdcb dfgab aegbfc dbeg cfdea dabfge':
+      'fdagb adbgefc bae fgbdac',
+  },
+  {
+    'cefb agfedc ebcfgad fgadbe edgbc be bed dfgce cedfgb dcbag':
+      'be faecgd gcbda eb',
+  },
+  {
+    'gaed dbefcga dbgce ag abfce gfacbd adgbec dgfecb gceab agb':
+      'debcga gedfcab aged dcbge',
+  },
+  {
+    'dbfceg abcgde gcabd dabfg geabfcd cg egca ecdab dgc abcdef':
+      'bdcefg fbgcaed cdg gc',
+  },
+  {
+    'gf bcegd fbg dacfbe afcdb gfda efgacb bgfcda fdcgb fbedacg':
+      'bcfda bedcg gbf fdceab',
+  },
+  {
+    'cfgbe gdcebaf fbcdeg bdfga edf fcedab dfgbe de cedg gebfca':
+      'abgcdef befgd fed fedbgca',
+  },
+  {
+    'fbdac bafgcd eb cbfged bec cdefab dcefabg deab fbaec fcage':
+      'cfeba bgcefd ebc bce',
+  },
+  {
+    'dab ebaf afgde cdfabg debga dcebg fgacde ba bcdafge efdbag':
+      'ba bagde dgaef gebcd',
+  },
+  {
+    'dbacf ad dgcfb caefdb daf deab fegcda bafdceg efcab fgacbe':
+      'deba egcdfba afd ad',
+  },
+  {
+    'bfega dabegcf egafd becgdf gbaced bgcfe afgbec ab cbfa gba':
+      'abegf defga fabcge cabf',
+  },
+  {
+    'bfecg fd abdgc gfbacd afdb dgf cgeabd aebfcgd gdfeac cdbgf':
+      'bcfdg agcdb cdgaeb eacdbg',
+  },
+  {
+    'fea dgefca gacbfd dcfae afbedg dbcef dbefgca gafdc ae aegc':
+      'afced efa egac ea',
+  },
+  {
+    'aegc gdcaef bfgcda acd cegbfd ac decgf gfecdab efadb fcead':
+      'cadef cfgde agcfbd dfeagc',
+  },
+  {
+    'bafcgd ce bdcage fbdeg ebgdc ecba ceg cedgaf edcagfb bdcga':
+      'cbae cbgefda gceabfd cafedg',
+  },
+  {
+    'bac ca bfgcda aecfdgb egbfca cdbef abcdf gefadb fbdga agdc':
+      'dcbfe cagd dfabc dcag',
+  },
+  {
+    'agdcbe cdagb dec de gbed bfadegc afcbe fagcbd dceab cgedaf':
+      'ecd ed gbacd dafgebc',
+  },
+  {
+    'dfgbeca fgdeb dcefga af cgaf eabdgc afgde cedafb adf gacde':
+      'edcbfa cadfgbe gdfebac af',
+  },
+  {
+    'fba dcbgeaf agecfb gabde eacf fa cgbdaf aegfb gefcbd ecbfg':
+      'fegcba bgeaf gbaed bagfe',
+  },
+  {
+    'bd afgdc gebcf gbeacd cadbgf caefgd afdb bdg fdbcg cadgefb':
+      'fbdgc cgebf agbfcd cbgdf',
+  },
+  {
+    'fcgbdea dcbgaf cgfde ebcadf gcfaeb gcfeb ceafb gbea bg cgb':
+      'cbg cefgd fgdabc feabdc',
+  },
+  {
+    'ac cefgba gabc fbcea caf bafed bgcfe dbegcf cbaedfg fdacge':
+      'ca dcbfeg fbgce bacg',
+  },
+  {
+    'agfbdce gcb gc abdefc badgfc cega egbfd efacb bcafge fbgec':
+      'cbefa cabgfd afcebg ebgcf',
+  },
+  {
+    'cbga adcef cbgdfa dab dfbcg ebdgcf aegdfb ba fcbad aegfcbd':
+      'eadbfg bcga cafbgd bfdgec',
+  },
+  {
+    'gedfac dfeag gfdb cabgefd gaefdb bfgae fba eacbg deacfb fb':
+      'bf afb abgce egbfa',
+  },
+  {
+    'ebdfg gaefcb de dgeacb gafeb bgfdc deb egcbafd edfa gbfdea':
+      'bafeg ed fgcbd bfadcge',
+  },
+  {
+    'dagfc ecg cafdgb bdeac cdfgae dfgceab degca gdcebf eg gfea':
+      'cgdfabe afecdg decga gcbadf',
+  },
+  {
+    'agf ebfcgd cefgab ga cedfbag fdcbg dcefa cfgad gcbfda gbad':
+      'abegcdf agbecf gbad bcgfd',
+  },
+  {
+    'cfabdg da abfd gcaef fdgac dga dbfcg cbeagd bdecfg becdgaf':
+      'fbad gdcfa gfdca gcbdf',
+  },
+  {
+    'egad dg ebacg gcfeba adcgfb becgd dfceb ecfbdga gcd egbdca':
+      'dg gabce gbecda gacedb',
+  },
+  {
+    'fgbdec eca cabd gfeadc ac afgbe degbc fecbagd gbadce gcabe':
+      'eac dabc bcadeg efabg',
+  },
+  {
+    'fd bdegc dcabge dcefga decbfg cdfb degbf egfba edbcgfa dfg':
+      'fdg gdf gbecd bdgfce',
+  },
+  {
+    'fcebd efdbgc degabc fegad gb cadbegf bgdfe bfgc eacbdf egb':
+      'agdfe afdge bge cbaedg',
+  },
+  {
+    'fdgc bdeac abcgef dfbega daegc gca dafeg gcfbdae gc cfeadg':
+      'cag agc begcadf gfbeca',
+  },
+  {
+    'gfabcd edafc acegbd fabdc dacbg badgcfe fb bfgc baf fadbeg':
+      'adcbf gafedb fba acbfd',
+  },
+  {
+    'bgdec acfbe cfeagbd efcbd faebgc fbdeca dfc adfb cgfade fd':
+      'fdc afegcd ebcgfda fd',
+  },
+  {
+    'gcebf bdfgca de cedbg ecgfad dbcaeg agcdb gbfceda eadb gde':
+      'dbgce bade abgdce dbgec',
+  },
+  {
+    'gfbdcae bac ca gfabe cfdbag agec edfgba efdcb acbef gbcefa':
+      'gcbfad fcaegb ac fgcbad',
+  },
+  {
+    'gadebfc cedbga bfad dgebaf cfgeb dfeag bgdef acedgf bd bed':
+      'degbf eafdgc edb db',
+  },
+  {
+    'bdgca gfbca ebcfdg cdea gafdbe cdb cd agebdc aebcdgf deabg':
+      'edbag bdaeg dcefgab adec',
+  },
+  {
+    'cedaf fbdaeg cgaef bceagf dfgeacb cbga agf ga ecfgb dbcgfe':
+      'dafbeg ag fegbcd dbgceaf',
+  },
+  {
+    'abgcd aefcdg fab eadfg ecbgfa fgbda aedfbgc bfed bf dgfeba':
+      'bfa fgaed bceagf agdef',
+  },
+  {
+    'aecb bfa afgedcb befgdc ba efdbc bgcafd cdfeab aebfd fdeag':
+      'fab ba fba efbadc',
+  },
+  {
+    'cbgedf gdebc cebgfda gdeca cdgeab adcb eagdf cea ca bfaecg':
+      'dcgea fbegac dabc acefbg',
+  },
+  {
+    'fgc bcag cdbgf gedcaf ebgdaf gbdfa cedfb cg bdagfc fgbcaed':
+      'fgcbda gdcfba cdebf gcbfd',
+  },
+  {
+    'cafdgbe fecga cfgdbe gf eafdc gbcea fge gbaf acgbde gcbfea':
+      'efdac gfaec agbec bedgfac',
+  },
+  {
+    'bace egdafc eb bdecfag gbcfd daebfg gedca geb edcbg edgcab':
+      'gedcb eb fedbga bgcde',
+  },
+  {
+    'bgdcf cfdgabe dafgb gfc bacg bdcef cg cfedga fbegda abgfdc':
+      'afgebd fagdb fdaecgb cg',
+  },
+  {
+    'gacde bcgfaed fbcde ebfdgc dfba adecbf gcbaef adcfe caf fa':
+      'adfb ebdfc daebfgc fecdba',
+  },
+  {
+    'gbeac dgbaefc caegfd gd cgfd edg aedcg befdac fcade dbagef':
+      'daebgf gadcfe ged dg',
+  },
+  {
+    'bcfdg bfecag efcdg fagedb adce dacbgef gcedaf ed efd egfac':
+      'aecd abecfg cedgf efgbda',
+  },
+  {
+    'acdfg cfebdag cfegba cga gfbda ac cfbgda cdegf fegdba bcad':
+      'acfdg fagdecb fedgc ca',
+  },
+  {
+    'aeb fcbagd gafebd be efcda degbca edfgcab dbaef gfadb bfge':
+      'dcabge aeb be adbegc',
+  },
+  {
+    'gbfdaec gafedc gadcfb efdcba acfbe ef caebg cfe dfeb bacfd':
+      'afebcd cabef cfbda ef',
+  },
+  {
+    'aegcf dagbe bf fabedg bafd feb fdbceag gafbe edfcgb egcadb':
+      'eabfg fgace bgade dbaf',
+  },
+  {
+    'fedbagc afgcb dc fbdcg bdegaf edcb cdf begdf edfgca gfcbed':
+      'dbec gbcfa dc cgabf',
+  },
+  {
+    'gcfade dg fbecgda bcdef gbfd gdbec abdefc cgeab gbfcde deg':
+      'cdeafbg gd bfgdcea dafbec',
+  },
+  {
+    'fdega cfgab adc cbegad cbfgaed gfaced fdec abdegf agcdf dc':
+      'cagbed dgabce dcefga fgcad',
+  },
+  {
+    'bf bfadc bfga gfcda bfc afdgbce cfdbge bgacfd efagcd cdaeb':
+      'dcabe fb gacfed edacb',
+  },
+  {
+    'deba badcf gbdcaf bfdce ecdfg bec efcgbda cgebfa be aebcfd':
+      'eb adbgcef cfadb dfecg',
+  },
+  {
+    'eadcfgb gf eadcf dagfe gfab bgefdc egdba dfg eagbfd egdbca':
+      'aecbdg edfag efadc adegb',
+  },
+  {
+    'cegabd gaedc gceabfd degabf agfceb acdgf adgeb debc ce gec':
+      'eagbfc cge ce agcfd',
+  },
+  {
+    'cfdabg fcead agfedb ba fbcgd fcgedb gfbdcea dbfca cgba adb':
+      'gefdba bafgdc dceaf ab',
+  },
+  {
+    'degbf bcd agcfbd bgeafc fdca aebdcg cgbfd fagcb dc cfgbeda':
+      'fcad adgcfb cd dbegf',
+  },
+  {
+    'dagbc eabcdf abgcefd bdagef faec beafd ebadc gdfcbe cbe ce':
+      'cadbg adcgb gbdefc ec',
+  },
+  {
+    'eadf fcbga edgfacb cfbdeg fagdb abgde cgbdae dfb df fgdeba':
+      'feadgbc egdba df gecadb',
+  },
+  {
+    'eacf dgecb bcfda fbgdea gbfdac fcdabe dfe cfebd ef bgfcdea':
+      'aecfgbd fde cadefb ecgfdba',
+  },
+  {
+    'bdecag cfdaeg cbafg gbafed bedf gabdf fedag db adefgcb dab':
+      'fegadc efcgad feadg fedb',
+  },
+  {
+    'fdegca facge dcfe ec eca fagde gafcb egcadb gfdaebc gdaefb':
+      'eac acgbf dgafeb fbagc',
+  },
+  {
+    'cbfdea bg gbea egbfcad fdecbg eabcf acbgef fgbca fgb afcdg':
+      'ecbdaf cfabe abcgf bega',
+  },
+  {
+    'fegcd cagbe edafcg fgbced dfeabg bd bcdeg bdcf bed agcebdf':
+      'ecfgd cgedf gcabe fegdba',
+  },
+  {
+    'ec eafgbd aefdc cgae fadcb bgdefc gbcdfea ced cdfega efagd':
+      'ecga ce dfgceb bacfd',
+  },
+  {
+    'decfa efc fgdaecb cbgfad ebca ce cbafd adbcfe afged ebgdfc':
+      'cbfgad cfabd bcae cgafdb',
+  },
+  {
+    'cbdgfe egafcdb gbadce fc decgfa bfceg gcf dbfc cgedb febag':
+      'cf cfgeb gfbedc gbdefc',
+  },
+  {
+    'gface gabd fdceba cgdfbe bfg cbgdfea fbcagd gb abfgc cbfda':
+      'bdcgfe cfgbde abcfd gcbfdea',
+  },
+  {
+    'fadgbe gdafb daef bae bacfgd gecdb gebfca gebda ea eacgdbf':
+      'ebdfag bfgda agbde ae',
+  },
+  {
+    'ec bacdegf dbacg cdeb fageb cea abecg bdacfg dacebg dafegc':
+      'bgdacef gacefd ebgaf acgdfb',
+  },
+  {
+    'dgbfe gb ebafdc bgd daecfgb aedfb dfegc ageb fadgeb gafdcb':
+      'fgaedb dgfce fbegd facdgb',
+  },
+  {
+    'egcfd acdefb fgea fbdagc efacd aefdcg bdfaecg fg fdg ecdgb':
+      'aedcbf fgd cedaf gf',
+  },
+  {
+    'fdcbge dfbe cgdea db gbfce gcdbfa agecbdf bgcde abgefc bgd':
+      'dagfcb efbdgc ecgfb febd',
+  },
+  {
+    'geadcb afgbdc cfd cedgf ebgfcd bgfaedc dbceg fd bdfe ceagf':
+      'fd dagebc edcgb fd',
+  },
+  {
+    'fdeabc eg cedbag fgbadce agefc cbfgae ceg ceabf gdacf fbge':
+      'egbf gec ge ge',
+  },
+  {
+    'ebcgd ebc efcagb cbaged fdecgab dgfeab ec dgbcf degab cdae':
+      'cgebd gdafecb afcebg cbegd',
+  },
+  {
+    'bcdafg cfdea edg dcefgb egdcfba gbdfc gcbe eg gedcf bagfed':
+      'bfadegc fgbdc cefgd cfdgb',
+  },
+  {
+    'edcab gcabefd dg cbagdf gbedc cdg fgecb cadbfe gdea cebadg':
+      'aged gcfbe gdc dbgfeac',
+  },
+  {
+    'acgedf cbfadg ebafdg fcged cdg cefbg eadc dgfae cd dbfegac':
+      'fgecb bfacgd gbecf fcbdag',
+  },
+  {
+    'ecfda cbgfeda dg ebfcdg aegfbc bcgae egdac abgd gde gadcbe':
+      'gcbae efdgbc gabdce dg',
+  },
+  {
+    'gbfecda gbd dg cadg egcfbd eabgf ebcfad gbdcaf fbdga badcf':
+      'dbg abfge fcdgbe ebgfa',
+  },
+  {
+    'aegcf dgaefc abdfcg fdce abcdge bfdcgea fcg feabg gaecd fc':
+      'fgc cdebag fecd cfde',
+  },
+  {
+    'gbcfae ecgadb ecg edag gbdca decbg eg bfecd cbdagf edcfagb':
+      'gbcadf ge afdgbc gecdba',
+  },
+  {
+    'dec caegdbf deacgf dfcea gadc gefcba bedaf dc febcgd gcafe':
+      'dcagbef dc eafgdc cfdebg',
+  },
+  {
+    'dafebg gfced fgcdabe bagdec eafbcg ebc dbac agedb cb bcdge':
+      'egacfb ecgfd edcbg cb',
+  },
+  {
+    'gcd dfbcag gbaefd agfdb dc abcegd cfega ebcadfg dgcaf cdfb':
+      'fabgdc gbedac agdefb bcadfg',
+  },
+  {
+    'dcgaefb dcebg cb bdeag afdcge cfeb cdgef bcd dcgbfa dcbgfe':
+      'fecgad befgdc efcb eadgb',
+  },
+  {
+    'agc aefgcd ag dfaebgc edcbfa cbagd gbfa abfdc decgb dcfagb':
+      'gabdc cga dgfcba bgadcf',
+  },
+  {
+    'bde beca gcafdb bdecg fdgeabc aedgbc dbcag dfceg gbfade eb':
+      'bcae agdcbf fcgde ecdbg',
+  },
+  {
+    'gbacdef bf fab cbdf fdacbg bcdga bdcaeg gfabd fabecg egdfa':
+      'bf gcbeaf dcabg becdag',
+  },
+  {
+    'bf ecgbdf cfgdeab dgfb cfedba cbagde feb fceag decbg gbcef':
+      'ebdgc fbgd cgedab dacfeb',
+  },
+  {
+    'eabdcg efdgbca abegc bf efab cfged afcdbg fgebc gbf agfcbe':
+      'ebcag ecgabd baedcg gbcfea',
+  },
+  {
+    'efcgd afbgec bdfgca adgef eabd ae gfadbe gae fgbda bdafgec':
+      'fadgcb bgaecf eag gfdea',
+  },
+  {
+    'cafb dcbage gfecd dafec ac cdgbfae badfeg afecdb cae adefb':
+      'ebacfd badgfe ceadf dbgcea',
+  },
+  {
+    'deagb dfebcg deagf dagcbe fcdgeab bafg daecf gdeafb dfg fg':
+      'gf fedgba gdbae fgd',
+  },
+  {
+    'gbcfd ecfbdg eadcbg ceb agdfcb fdceb ce ecfg daebf aedgcbf':
+      'egcdbf fadbe ec abcdeg',
+  },
+  {
+    'fbgca gadefb egbfd ecdgbf afgeb ea adbe fgdaebc fea agdecf':
+      'ae becdgf eaf agefb',
+  },
+  {
+    'gfcabd dabgf gfbcd fegacbd fcab bcd daebfg cgabde fdgce bc':
+      'bcfdg efdbga adefgb bgdcfa',
+  },
+  {
+    'dcbagfe ebgdac cabfeg gf egacb aefg cebfd cgbfe cbadgf gcf':
+      'aegf ebfdc bdgcfa gf',
+  },
+  {
+    'befcdg bef fcdb gcfae gfecb agdecb fb daegbf bfdgcea begcd':
+      'bf fgace cgebd dbgce',
+  },
+  {
+    'acfebg fdceg efcab bcd dabe cbafde gbcdaf db agfbedc cdefb':
+      'abde cefgd cdb fecbd',
+  },
+  {
+    'agc ac afged dfbcg fbgedca eacf gdbace dfcga agfdce aegdbf':
+      'gcabedf fecgad agfde gdefba',
+  },
+  {
+    'dfc gdce dc bdegfc debfg gceabdf bafged efcdb gbdfca ebcfa':
+      'fbcegd bcgdaf fbedc bfcde',
+  },
+  {
+    'cbedf baged adfeb bgeacd gebafd bfa afdg af gcfedba gfacbe':
+      'edbaf fabed gbedcfa fadgbe',
+  },
+  {
+    'gabe debfa cgdbfe adfge dfgcea beagfd abcfd be abgfdce dbe':
+      'fdacb eb fcegdb egfbcd',
+  },
+  {
+    'dceag dacfbg gcbae bfae becfg gcdbfe bacfedg ecfagb bag ab':
+      'bgeac eacfbg efagbc egfbc',
+  },
+  {
+    'ebcdfa dcebg eab bafcedg cadgfb ae fabged bdfca face adceb':
+      'bae dabgfe gdbec ae',
+  },
+  {
+    'ecbgaf efdgac edagf cefdg fgbdc gce eadc bfdega acbfedg ce':
+      'ce efbgad fbcdg fcdgb',
+  },
+  {
+    'bagf afbde bad gdfebc bdceag bdcagef acefd dgfbea bdfge ba':
+      'abd fdbae cafde bfaged',
+  },
+  {
+    'dcfaegb efdbc afecb ba bgcfda bac gbae gbface afecg gacfde':
+      'abeg fcdage dgbacf febagc',
+  },
+  {
+    'bafc faced cfagedb bdc bgead aefbcd degfcb bc gfaedc cedab':
+      'dbc dcb feadc bdcagef',
+  },
+  {
+    'ebadfc gf afebd gfb gafd ecdbg dcegfba dgabfe degfb abcgef':
+      'gbf fdbgae fadbe gf',
+  },
+  {
+    'cbagde bcdae dgcab dg dbeacf gefabd edcgafb acfgb dcge dgb':
+      'gbacd debgac acbedf ecdg',
+  },
+  {
+    'aegcf dagecf abegcf facgb fba cdagb bgfecda fb fbeg bdcfea':
+      'bfeagc gbafce gcabfe fgeb',
+  },
+  {
+    'dgebc dg ebcdf bfdcga gdc ebcadf baegc bedgcaf cbdegf gfed':
+      'edgbc bdfgce dg gd',
+  },
+  {
+    'cebd gbcfae fecgb gadbfc cdf dfceg fedag debfagc bfdecg cd':
+      'bcfeg ecgfb acbfeg cegabf',
+  },
+  {
+    'ab cbae dgfbe ebacgd gabed abgcdfe fagbdc abg efdcag decga':
+      'bcaefdg fgdacb aceb bdcafeg',
+  },
+  {
+    'ea bafgd cafgeb gae aegdb dbefacg begdac dcegb fbgced eacd':
+      'aedc bdgea fbdecg gebacf',
+  },
+  {
+    'afgdce fe gdecbf egfb cbaed bfcdage cef fgadbc dfebc gdcfb':
+      'fe fec efdcbg fcdebg',
+  },
+  {
+    'cfbdge fabcg bge eadb fgebda abegf ebgafdc eb dgaef adfecg':
+      'gfecdb gacfde afbcg ecgbdf',
+  },
+  {
+    'abecf bgcfad bdcg gfbeadc fbgad bfagc dgbfae fecgad gc cga':
+      'fdabge bcfag dgabf acg',
+  },
+  {
+    'gcfdae be decfg gedafcb cbge edb aecfbd agfbd cedfbg bgfde':
+      'cdgbfe fgdceb gdcfe becg',
+  },
+  {
+    'agfdce baecgf dgbaef afegc cebgd ad fcad gfcabde ead adegc':
+      'ebfgca cfbage cgaebdf gafebd',
+  },
+  {
+    'ea acfgde dfbacg egba cgfba caefb fbced cea egbcaf dabfceg':
+      'bgecaf bgefac bfcaged fgbcae',
+  },
+  {
+    'gbcfda cegbf cgd badfcge ceabd dg aedg gcbed bcaefd acedgb':
+      'fcabgd dg fbgce gd',
+  },
+  {
+    'bgface eafbcdg bdegfc efcdb dceafb ecdfg fgaed gcf gc dcbg':
+      'gfc bcgefd fdceb gbfeac',
+  },
+  {
+    'fdageb gefdbc cagbe fdgba ecadfgb dcfa abgcdf dbc bagcd cd':
+      'agefdb bdagf dbc cgadbf',
+  },
+  {
+    'gcfbd gafbcde aedg bfdga ad eacdfb bgcaef adf bgfae gdfeab':
+      'bgfcdea aegbf fbdag gafcdeb',
+  },
+  {
+    'dgabe fdace acbfge efdcabg egcda cge gc beadcg febgad gdbc':
+      'dgcb gebadc adbge gdace',
+  },
+]

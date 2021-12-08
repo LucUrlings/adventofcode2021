@@ -19,17 +19,15 @@
     "runDay6PartOne": "node src/days/6/partOne/main.js",
     "runDay6PartTwo": "node src/days/6/partTwo/main.js",
     "runDay7PartOne": "node src/days/7/partOne/main.js",
-    "runDay7PartTwo": "node src/days/7/partTwo/main.js"
+    "runDay7PartTwo": "node src/days/7/partTwo/main.js",
+    "runDay8PartOne": "node src/days/8/partOne/main.js",
+    "runDay8PartTwo": "node src/days/8/partTwo/main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
-    "prettier": "2.5.0"
-  },
-  "dependencies": {
     "eslint-plugin-prettier": "^4.0.0"
   }
 }
