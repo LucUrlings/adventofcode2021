@@ -2,13 +2,13 @@ const input = ['000000011010', '011001111011', '100101011101', '000110000110', '
 
 let mostCommonBinary = ''
 for (let i = 0; i < 12; i++) {
-    let ratio = 0
-    input.forEach((bin, index) => {
-        ratio = bin.charAt(i) === '1'
-            ? ratio + 1
-            : ratio - 1;
-    })
-    mostCommonBinary += ratio > 0 ? '1' : '0'
+  let ratio = 0
+  input.forEach((bin, index) => {
+    ratio = bin.charAt(i) === '1'
+      ? ratio + 1
+      : ratio - 1
+  })
+  mostCommonBinary += ratio > 0 ? '1' : '0'
 }
 const gamma = parseInt(mostCommonBinary, 2)
 const flipBits = (str) => str.split('').map(b => (1 - b).toString()).join('')

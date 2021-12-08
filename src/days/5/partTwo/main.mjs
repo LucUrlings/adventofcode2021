@@ -1,9 +1,9 @@
-import {input} from "../input.mjs";
+import { input } from '../input.mjs'
 
 const main = (lines) => {
-  let inputLines = [...lines];
+  let inputLines = [...lines]
 
-  const grid = new Array(1000).fill(0).map(() => new Array(1000).fill(0));
+  const grid = new Array(1000).fill(0).map(() => new Array(1000).fill(0))
 
   inputLines.forEach(item => {
     const x1 = item[0][0]
@@ -12,22 +12,22 @@ const main = (lines) => {
     const y2 = item[1][1]
 
     if (x1 === x2) {
-      const baseX = x1;
+      const baseX = x1
       const numbersInBetween = generateNumbersInBetween(y1, y2)
       numbersInBetween.forEach(number => {
-        grid[baseX][number]++;
+        grid[baseX][number]++
       })
     } else if (y1 === y2) {
-      const baseY = y1;
+      const baseY = y1
       const numbersInBetween = generateNumbersInBetween(x1, x2)
       numbersInBetween.forEach(number => {
-        grid[number][baseY]++;
+        grid[number][baseY]++
       })
     } else {
       const coordinatesInBetween = generateCoordinatesInBetween(x1, y1, x2, y2)
       coordinatesInBetween.forEach(coordinates => {
         // console.log(coordinates)
-        grid[coordinates[0]][coordinates[1]]++;
+        grid[coordinates[0]][coordinates[1]]++
       })
     }
   })
@@ -44,18 +44,18 @@ const main = (lines) => {
 
 const generateCoordinatesInBetween = (x1, y1, x2, y2) => {
   console.log(`x1: ${x1}, y1: ${y1}, x2: ${x2}, y2: ${y2}`)
-  let lowX = null;
-  let highX = null;
+  let lowX = null
+  let highX = null
 
   if (x1 < x2) {
-    lowX = x1;
-    highX = x2;
+    lowX = x1
+    highX = x2
   } else {
-    highX = x1;
-    lowX = x2;
+    highX = x1
+    lowX = x2
   }
 
-  const distance = highX - lowX;
+  const distance = highX - lowX
 
   const coordinates = []
 
@@ -64,8 +64,7 @@ const generateCoordinatesInBetween = (x1, y1, x2, y2) => {
       for (let i = 0; i < distance + 1; i++) {
         coordinates.push([x1 + i, y1 + i])
       }
-    }
-    else { // X coordinate starts low, ends high. Y coordinate starts high and ends low
+    } else { // X coordinate starts low, ends high. Y coordinate starts high and ends low
       for (let i = 0; i < distance + 1; i++) {
         coordinates.push([x1 + i, y1 - i])
       }
@@ -75,33 +74,32 @@ const generateCoordinatesInBetween = (x1, y1, x2, y2) => {
       for (let i = 0; i < distance + 1; i++) {
         coordinates.push([x1 - i, y1 + i])
       }
-    }
-    else { // Both X and Y starts high, ends low.
+    } else { // Both X and Y starts high, ends low.
       for (let i = 0; i < distance + 1; i++) {
         coordinates.push([x1 - i, y1 - i])
       }
     }
   }
   console.log(coordinates)
-  return coordinates;
+  return coordinates
 }
 
 const generateNumbersInBetween = (s, e) => {
-  let start;
-  let end;
+  let start
+  let end
   let array = []
   if (s < e) {
-    start = s;
-    end = e;
+    start = s
+    end = e
   } else if (s > e) {
-    start = e;
-    end = s;
+    start = e
+    end = s
   }
   while (start < (end + 1)) {
-    array.push(start);
-    start++;
+    array.push(start)
+    start++
   }
   return array
-};
+}
 
 console.log(main(input))
