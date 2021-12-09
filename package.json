@@ -21,7 +21,9 @@
     "runDay7PartOne": "node src/days/7/partOne/main.js",
     "runDay7PartTwo": "node src/days/7/partTwo/main.js",
     "runDay8PartOne": "node src/days/8/partOne/main.js",
-    "runDay8PartTwo": "node src/days/8/partTwo/main.js"
+    "runDay8PartTwo": "node src/days/8/partTwo/main.js",
+    "runDay9PartOne": "node src/days/9/partOne/main.js",
+    "runDay9PartTwo": "node src/days/9/partTwo/main.js"
   },
   "keywords": [],
   "author": "",
