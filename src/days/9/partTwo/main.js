@@ -1,11 +1,39 @@
 import { input } from '../input.js'
 
+function Queue() {
+  this.elements = []
+
+  Queue.prototype.enqueue = function (e) {
+    this.elements.push(e)
+  }
+  // remove an element from the front of the queue
+  Queue.prototype.dequeue = function () {
+    return this.elements.shift()
+  }
+  // check if the queue is empty
+  Queue.prototype.isEmpty = function () {
+    return this.elements.length === 0
+  }
+  // get the element at the front of the queue
+  Queue.prototype.peek = function () {
+    return !this.isEmpty() ? this.elements[0] : undefined
+  }
+  Queue.prototype.length = function () {
+    return this.elements.length
+  }
+}
+
+function test(enqueue) {
+  if (enqueue.peek() === 7) enqueue.enqueue(8)
+  console.log(q.dequeue())
+}
+
 /**
  *
  * CooordinatePositions:
- *        1
- *    2,  XY, 3
- *        4
+ *          up
+ *    left, XY,   right
+ *          down
  *
  * @param heightMap
  * @param posX
@@ -14,49 +42,91 @@ import { input } from '../input.js'
 const findBasins = (heightMap, posX, posY) => {
   const heightXY = heightMap[posY][posX]
 
-  let height1
+  let up
+  let left
+  let right
+  let down
 
-  let height2
-  let height3
+  if (posY - 1 >= 0) up = heightMap[posY - 1][posX]
+  else up = 99
 
-  let height4
+  if (posX - 1 >= 0) left = heightMap[posY][posX - 1]
+  else left = 99
 
-  if (posY - 1 >= 0) height1 = heightMap[posY - 1][posX]
-  else height1 = 99
+  if (posX + 1 < 100) right = heightMap[posY][posX + 1]
+  else right = 99
 
-  if (posX - 1 >= 0) height2 = heightMap[posY][posX - 1]
-  else height2 = 99
+  if (posY + 1 < 100) down = heightMap[posY + 1][posX]
+  else down = 99
 
-  if (posX + 1 < 100) height3 = heightMap[posY][posX + 1]
-  else height3 = 99
-
-  if (posY + 1 < 100) height4 = heightMap[posY + 1][posX]
-  else height4 = 99
-
-  console.log(`
-     ${height1}
-  ${height2}  ${heightXY}  ${height3}
-     ${height4}`)
-
-  if (
-    heightXY < height1 &&
-    heightXY < height2 &&
-    heightXY < height3 &&
-    heightXY < height4
-  ) {
-    return heightXY + 1
+  if (heightXY < up && heightXY < left && heightXY < right && heightXY < down) {
+    // Lowest point of basins
+    return getBasinSize(heightMap, { posX, posY })
   }
-  return 0
+}
+
+const getBasinSize = (heightMap, lowestPoint) => {
+  const heightMapClean = [...heightMap].map((r) => r.map((n) => n.toString()))
+
+  let q = new Queue()
+  const { posX, posY } = lowestPoint
+  q.enqueue({ posX, posY })
+
+  while (!q.isEmpty()) {
+    const item = q.dequeue()
+    if (
+      heightMapClean[item.posY][item.posX] &&
+      heightMapClean[item.posY][item.posX] !== '9'
+    ) {
+      console.log(`Position is set to null: posX: ${posX}, posY: ${posY}`)
+      heightMapClean[item.posY][item.posX] = null
+
+      if (item.posY - 1 >= 0)
+        q.enqueue({
+          posX: item.posX,
+          posY: item.posY - 1,
+        }) // Up
+      if (item.posY + 1 < 100)
+        q.enqueue({
+          posX: item.posX,
+          posY: item.posY + 1,
+        }) // Down
+      if (item.posX - 1 >= 0)
+        q.enqueue({
+          posX: item.posX - 1,
+          posY: item.posY,
+        }) // Left
+      if (posX + 1 < 100)
+        q.enqueue({
+          posX: item.posX + 1,
+          posY: item.posY,
+        }) // Right
+    }
+  }
+
+  let size = 0
+  heightMapClean.forEach((row) => {
+    row.forEach((item) => {
+      if (item === null) size++
+    })
+  })
+
+  return size
 }
 
 const main = (heightMap) => {
-  let riskLevel = 0
-
+  const basins = []
   heightMap.forEach((heightRow, posY) => {
     heightRow.forEach((position, posX) => {
-      riskLevel += findBasins(heightMap, posX, posY)
+      const newBasins = findBasins(heightMap, posX, posY)
+      if (newBasins) basins.push(newBasins)
     })
   })
-  return riskLevel
+  return basins
+    .sort((a, b) => {
+      return b - a
+    })
+    .slice(0, 3)
 }
-console.log(main(input))
+const highest = main(input)
+console.log(highest[0] * highest[1] * highest[2])
