@@ -66,20 +66,21 @@ const findBasins = (heightMap, posX, posY) => {
 }
 
 const getBasinSize = (heightMap, lowestPoint) => {
-  const heightMapClean = [...heightMap].map((r) => r.map((n) => n.toString()))
+  const heightMapCopy = [...heightMap].map((r) => r.map((n) => n.toString()))
 
   let q = new Queue()
-  const { posX, posY } = lowestPoint
-  q.enqueue({ posX, posY })
+  q.enqueue(lowestPoint)
 
   while (!q.isEmpty()) {
     const item = q.dequeue()
     if (
-      heightMapClean[item.posY][item.posX] &&
-      heightMapClean[item.posY][item.posX] !== '9'
+      heightMapCopy[item.posY][item.posX] &&
+      heightMapCopy[item.posY][item.posX] !== '9'
     ) {
-      console.log(`Position is set to null: posX: ${posX}, posY: ${posY}`)
-      heightMapClean[item.posY][item.posX] = null
+      console.log(
+        `Position is set to null: posX: ${item.posX}, posY: ${item.posY}`,
+      )
+      heightMapCopy[item.posY][item.posX] = null
 
       if (item.posY - 1 >= 0)
         q.enqueue({
@@ -96,7 +97,7 @@ const getBasinSize = (heightMap, lowestPoint) => {
           posX: item.posX - 1,
           posY: item.posY,
         }) // Left
-      if (posX + 1 < 100)
+      if (item.posX + 1 < 100)
         q.enqueue({
           posX: item.posX + 1,
           posY: item.posY,
@@ -105,7 +106,7 @@ const getBasinSize = (heightMap, lowestPoint) => {
   }
 
   let size = 0
-  heightMapClean.forEach((row) => {
+  heightMapCopy.forEach((row) => {
     row.forEach((item) => {
       if (item === null) size++
     })
