@@ -47,7 +47,6 @@ const processLine = (line) => {
         score = score * 5 + 4
         break
     }
-
     console.log(lineCopy)
   }
   return score
