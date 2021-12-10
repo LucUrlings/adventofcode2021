@@ -23,7 +23,11 @@
     "runDay8PartOne": "node src/days/8/partOne/main.js",
     "runDay8PartTwo": "node src/days/8/partTwo/main.js",
     "runDay9PartOne": "node src/days/9/partOne/main.js",
-    "runDay9PartTwo": "node src/days/9/partTwo/main.js"
+    "runDay9PartTwo": "node src/days/9/partTwo/main.js",
+    "runDay10PartOne": "node src/days/10/partOne/main.js",
+    "runDay10PartTwo": "node src/days/10/partTwo/main.js",
+    "runDay11PartOne": "node src/days/11/partOne/main.js",
+    "runDay11PartTwo": "node src/days/11/partTwo/main.js"
   },
   "keywords": [],
   "author": "",
