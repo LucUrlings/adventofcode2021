@@ -10,10 +10,8 @@ const removeCompleteSequences = (lineCopy) => {
       .replace('{}', '')
       .replace('[]', '')
     if (lineCopy.length === lineCopyOld.length) removing = false
-
     console.log(lineCopy)
   }
-
   return lineCopy
 }
 
@@ -51,7 +49,6 @@ const processLine = (line) => {
     }
     lineCopy = removeCompleteSequences(lineCopy)
   }
-
   return score
 }
 
@@ -64,4 +61,5 @@ const main = (lines) => {
   total = total.filter((score) => score !== 0).sort((a, b) => a - b)
   return total[Math.floor(total.length / 2)]
 }
+
 console.log(main(input))

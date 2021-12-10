@@ -1,8 +1,6 @@
 import { input } from '../input.js'
 
-const processLine = (line) => {
-  let lineCopy = line
-
+const removeCompleteSequences = (lineCopy) => {
   let removing = true
   while (removing) {
     const lineCopyOld = lineCopy
@@ -12,9 +10,14 @@ const processLine = (line) => {
       .replace('{}', '')
       .replace('[]', '')
     if (lineCopy.length === lineCopyOld.length) removing = false
-
     console.log(lineCopy)
   }
+  return lineCopy
+}
+const processLine = (line) => {
+  let lineCopy = line
+
+  lineCopy = removeCompleteSequences(lineCopy)
 
   for (let i = 0; i < lineCopy.length; i++) {
     switch (lineCopy.charAt(i)) {
@@ -34,7 +37,6 @@ const processLine = (line) => {
         break
     }
   }
-
   return 0
 }
 
@@ -46,4 +48,5 @@ const main = (lines) => {
 
   return total
 }
+
 console.log(main(input))
