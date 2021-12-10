@@ -31,23 +31,24 @@ const processLine = (line) => {
     const last = lineCopy.charAt(lineCopy.length - 1)
     switch (last) {
       case '(':
-        lineCopy = lineCopy + ')'
+        lineCopy = lineCopy.slice(0, -1)
         score = score * 5 + 1
         break
       case '[':
-        lineCopy = lineCopy + ']'
+        lineCopy = lineCopy.slice(0, -1)
         score = score * 5 + 2
         break
       case '{':
-        lineCopy = lineCopy + '}'
+        lineCopy = lineCopy.slice(0, -1)
         score = score * 5 + 3
         break
       case '<':
-        lineCopy = lineCopy + '>'
+        lineCopy = lineCopy.slice(0, -1)
         score = score * 5 + 4
         break
     }
-    lineCopy = removeCompleteSequences(lineCopy)
+
+    console.log(lineCopy)
   }
   return score
 }
