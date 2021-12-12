@@ -25,52 +25,103 @@ ${grid[9][0] === 0 ? ANSI_YELLOW : ''}${grid[9][0]}${ANSI_RESET} ${grid[9][1] ==
 
 const addOne = (lines) => lines.map(row => row.map(number => number + 1))
 
+/**
+ *
+ * CooordinatePositions:
+ *    1   2   3
+ *    4   XY  6
+ *    7   8   9
+ *
+ * @param lines
+ * @param posY
+ * @param posX
+ */
+const flash = (lines, posY, posX) => {
+  console.log(`${posY}-${posX}`)
+  // lines[posY - 1][posX - 1]   //  1
+  // lines[posY - 1][posX]       //  2
+  // lines[posY - 1][posX + 1]   //  3
+  // lines[posY][posX - 1]       //  4
 
-const checkForFlash = (lines, posY, posX) => {
+  // lines[posY][posX + 1]       //  6
+  // lines[posY + 1][posX - 1]   //  7
+  // lines[posY + 1][posX]       //  8
+  // lines[posY + 1][posX + 1]   //  9
+  if (posY - 1 >= 0 && posX - 1 >= 0) lines[posY - 1][posX - 1]++   //  1
+  if (posY - 1 >= 0) lines[posY - 1][posX]++                        //  2
+  if (posY - 1 >= 0 && posX + 1 < 10) lines[posY - 1][posX + 1]++   //  3
 
+  if (posX - 1 >= 0) lines[posY][posX - 1]++                        //  4
+  if (posX + 1 < 10) lines[posY][posX + 1]++                        //  5
+
+  if (posY + 1 < 10 && posX - 1 >= 0) lines[posY + 1][posX - 1]++   //  7
+  if (posY + 1 < 10) lines[posY + 1][posX]++                        //  8
+  if (posY + 1 < 10 && posX + 1 < 10) lines[posY + 1][posX + 1]++   //  9
+
+  return lines
 }
 
-const changed = (old, current) => old.sort().join(',') === current.sort().join(',')
+const updateFlashed = (lines) => {
+  let flashCount = 0
+  for (let i = 0; i < lines.length; i++) {
+    for (let j = 0; j < lines[i].length; j++) {
+      if (lines[i][j] > 9) {
+        lines[i][j] = 0
+        flashCount++
+      }
+    }
+  }
+  return { flashCount, updatedLines: lines }
+}
 
+const changed = (old, current) => {
+  const set1 = new Set(old);
+  const set2 = new Set(current);
+  return old.every(item => set2.has(item)) &&
+    current.every(item => set1.has(item))
+}
 
 const checkArrayForFlash = (lines) => {
   let tempLines = [...lines]
-
-  let contine = true
 
   while (true) {
     let oldLines = [...tempLines]
 
     for (let i = 0; i < tempLines.length; i++) {
       for (let j = 0; j < tempLines[i].length; j++) {
-        tempLines = checkForFlash(lines, i, j)
+        if (tempLines[i][j] > 9) {
+          tempLines = flash(tempLines, i, j)
+        }
       }
     }
+    console.log('while')
+    if (changed(oldLines, tempLines)) {
+      console.log('oldLines')
+      logGrid(oldLines)
+      console.log('templines')
+      logGrid(tempLines)
 
+      break;
+    }
   }
 
-
-  for (let i = 0; i < tempLines.length; i++) {
-
-  }
-
-  lines.forEach((row, rIndex) => {
-    row.forEach((number, nIndex) => {
-
-    })
-  })
+  return updateFlashed(lines)
 }
 
-const cycleCount = 1
+const cycleCount = 100
 
 const main = (lineInput) => {
-
+  let flashes = 0
   let lines = [...lineInput]
   logGrid(lines)
 
   for (let i = 0; i < cycleCount; i++) {
     lines = addOne(lines)
+    const { flashCount, updatedLines } = checkArrayForFlash(lines)
+    lines = updatedLines
+    flashes += flashCount
     logGrid(lines)
+    console.log('flashes: ', flashes)
   }
 
 }
